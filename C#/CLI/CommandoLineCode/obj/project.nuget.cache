@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZjV9HYoTgP8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\C#\\CLI\\CommandoLineCode\\CLI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\crisr\\.nuget\\packages\\system.commandline\\2.0.0-beta4.22272.1\\system.commandline.2.0.0-beta4.22272.1.nupkg.sha512"
+  ],
+  "logs": []
+}

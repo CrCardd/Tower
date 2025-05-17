@@ -1,0 +1,25 @@
+{
+    "nome": "heloise faz havaina",
+    "idade": 15,
+    "corpo": {
+        "cabeça": {
+            "cabelo": {
+                "cor" : "loiro",
+                "tipo" : "cacheado"
+            },
+            "oculos": {
+                "cor": "preto",
+                "tipo": "redondo"
+            }
+        },
+        "tronco": {
+            "roupa": {
+                "tipo": "coberta",
+                "cor": "rosa"
+            }
+        },
+        "pé": {
+            "tipo": "machucado"
+        }
+    }
+}
