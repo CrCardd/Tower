@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using Tower.Configuration;
 using Tower.LayersArchives;
@@ -7,7 +8,7 @@ namespace Tower.Layers;
 
 public class PersistenceLayer : Layer
 {
-    public PersistenceLayer(string ProjectName)
+    public PersistenceLayer(string ProjectName) : base(ProjectName, "Persistence")
     {
         this.RootFolder =
             new IFolder($"{ProjectName}.Persistence",
@@ -29,8 +30,7 @@ public class PersistenceLayer : Layer
                     ),
                 ]
             );
-
-        this.RootFolder?.Create(ConfigurationVariables.RootPath);
+        CreateLayer();
     }
 
 }

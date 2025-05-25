@@ -7,7 +7,8 @@ class Program
 {
     public static void Main(string[] args)
     {
-        var test = new PersistenceLayer("bah_da_roça_mesmo_guri");
+        new PersistenceLayer("bah_da_roça_mesmo_guri");
+        new ApiLayer("bah_da_roça_mesmo_guri");
     }
 }
 
