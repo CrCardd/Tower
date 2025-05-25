@@ -1,4 +1,4 @@
-namespace Tower.LayersArchives;
+namespace Tower.Layers.Archives;
 
 public class IFolder(string name, IArchive[]? archives = null) : IArchive(name)
 {

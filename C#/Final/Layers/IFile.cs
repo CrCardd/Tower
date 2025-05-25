@@ -1,6 +1,6 @@
 using Tower.Configuration;
 
-namespace Tower.LayersArchives;
+namespace Tower.Layers.Archives;
 
 public class IFile(string name) : IArchive(name)
 {

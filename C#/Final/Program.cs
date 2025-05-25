@@ -1,5 +1,9 @@
 ﻿using System.CommandLine;
-using Tower.Layers;
+using Tower.Layers.Api;
+using Tower.Layers.Application;
+using Tower.Layers.Archives;
+using Tower.Layers.Domain;
+using Tower.Layers.Persistence;
 
 namespace scl;
 
@@ -7,8 +11,22 @@ class Program
 {
     public static void Main(string[] args)
     {
-        new PersistenceLayer("bah_da_roça_mesmo_guri");
-        new ApiLayer("bah_da_roça_mesmo_guri");
+        string name = "Jeremias";
+        Layer Api = new ApiLayer(name);
+        Layer Application = new ApplicationLayer(name);
+        Layer Domain = new DomainLayer(name);
+        Layer Persistence = new PersistenceLayer(name);
+
+
+        Api.CreateReferences();
+        Application.CreateReferences();
+        Domain.CreateReferences();
+        Persistence.CreateReferences();
+
+        Api.InstallPackages();
+        Application.InstallPackages();
+        Domain.InstallPackages();
+        Persistence.InstallPackages();
     }
 }
 

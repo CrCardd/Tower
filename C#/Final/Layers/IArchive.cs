@@ -1,6 +1,4 @@
-using Tower.Configuration;
-
-namespace Tower.LayersArchives;
+namespace Tower.Layers.Archives;
 
 public abstract class IArchive(string name)
 {
