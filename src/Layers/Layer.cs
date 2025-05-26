@@ -8,7 +8,16 @@ public abstract class Layer(string ProjectName, string layerName, string Type = 
     protected string ProjectName = ProjectName;
     protected string LayerName = layerName;
     protected IArchive? RootFolder { get; set; }
-    public void CreateLayer()
+
+
+
+    public abstract void CreateEntity(string name);
+    protected abstract void References();
+    protected abstract void Packages();
+
+
+
+    private void BuildLayer()
     {
         this.RootFolder?.Create(Config.RootPath);
         Process p = new Process();
@@ -23,18 +32,7 @@ public abstract class Layer(string ProjectName, string layerName, string Type = 
         p.StartInfo.Arguments = $"new gitignore -o {Config.RootPath}/{ProjectName}.{this.LayerName}";
         p.Start();
         p.WaitForExit();
-
-        Console.WriteLine($"{ProjectName}.{LayerName} project created!");
     }
-    public abstract void CreateEntity(string name);
-
-    public void CreateReferences()
-    {
-        References();
-        
-        Console.WriteLine($"{ProjectName}.{LayerName} projects referenced!");
-    }
-    protected abstract void References();
     protected void ReferenceTo(string referenceLayer)
     {
         Process process = new Process();
@@ -44,14 +42,6 @@ public abstract class Layer(string ProjectName, string layerName, string Type = 
         process.Start();
         process.WaitForExit();
     }
-
-    public void InstallPackages()
-    {
-        Packages();
-        
-        Console.WriteLine($"{ProjectName}.{LayerName} dependencies installed!");
-    }
-    protected abstract void Packages();
     protected void Install(string package)
     {
         Process process = new Process();
@@ -62,5 +52,31 @@ public abstract class Layer(string ProjectName, string layerName, string Type = 
         process.WaitForExit();
     }
     
+
+
+    public void CreateLayer()
+    {
+        int crrLine = Console.CursorTop;
+        Console.WriteLine($"{ProjectName}.{LayerName} creating project...");
+        BuildLayer();
+        Console.SetCursorPosition(0, crrLine - 1);
+        Console.WriteLine($"{ProjectName}.{LayerName} project created!              ");
+    }
+    public void CreateReferences()
+    {
+        int crrLine = Console.CursorTop;
+        Console.WriteLine($"{ProjectName}.{LayerName} referencing projects...");
+        References();
+        Console.SetCursorPosition(0, crrLine - 1);
+        Console.WriteLine($"{ProjectName}.{LayerName} projects referenced!              ");
+    }
+    public void InstallPackages()
+    {
+        int crrLine = Console.CursorTop;
+        Console.WriteLine($"{ProjectName}.{LayerName} installing dependencies...");
+        Packages();
+        Console.SetCursorPosition(0, crrLine - 1);
+        Console.WriteLine($"{ProjectName}.{LayerName} dependencies installed!              ");
+    }
 
 }
