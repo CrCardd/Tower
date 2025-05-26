@@ -15,7 +15,7 @@ public class CleanWA : Command<CleanWA.Settings>
     {
         [CommandOption("-o|--output")]
         [Description("Output path")]
-        public string? Output { get; set; } = "./";
+        public string? Path { get; set; } = "./";
 
         [CommandArgument(0, "[name]")]
         [Description("Clean Architecture project name")]
@@ -23,12 +23,12 @@ public class CleanWA : Command<CleanWA.Settings>
     }
     public override int Execute(CommandContext context, Settings settings)
     {
-        if (!(settings.Output == Config.RootPath))
-            Config.RootPath = $"{settings.Output}";
+        // if (!(settings.Path == Config.RootPath))
+        //     Config.RootPath = Directory.GetCurrentDirectory();
 
         if (settings.Name is null)
         {
-            if (settings.Output == Config.RootPath)
+            if (settings.Path == Config.RootPath)
             {
                 int i = Directory.GetCurrentDirectory().LastIndexOf('\\');
                 settings.Name = Directory.GetCurrentDirectory().Substring(i + 1);
@@ -42,8 +42,10 @@ public class CleanWA : Command<CleanWA.Settings>
         else
         {
             Config.RootPath += $"{settings.Name}";
-            settings.Output = Config.RootPath;
         }
+        settings.Path = Path.GetFullPath(settings.Path!);
+        
+        Config.RootPath = settings.Path;
         Config.ProjectName = settings.Name;
 
         Config.Api = new ApiLayer(settings.Name);

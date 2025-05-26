@@ -53,7 +53,7 @@ class Program
         if (File.Exists($"./{Name}Project.json"))
         {
             var json = JsonDocument.Parse(File.ReadAllText($"./{Name}Project.json")).RootElement;
-            Config.RootPath = json.GetProperty("Output").GetString() ?? "./";
+            Config.RootPath = json.GetProperty("Path").GetString() ?? "./";
             Config.ProjectName = json.GetProperty("Name").GetString();
         }
 

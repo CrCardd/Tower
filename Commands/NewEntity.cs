@@ -26,10 +26,12 @@ public class NewEntity : Command<NewEntity.Settings>
         Config.Domain = new DomainLayer(Config.ProjectName);
         Config.Persistence = new PersistenceLayer(Config.ProjectName);
 
+
         Config.Api.CreateEntity(settings.Name);
         Config.Application.CreateEntity(settings.Name);
         Config.Domain.CreateEntity(settings.Name);
         Config.Persistence.CreateEntity(settings.Name);
+        
 
         return 0;
     }

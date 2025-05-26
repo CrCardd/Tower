@@ -1,9 +1,8 @@
 namespace Tower.Layers.Archives;
 
-public class IFolder(string name, IArchive[]? archives = null, IFile? entity = null) : IArchive(name)
+public class IFolder(string name, IArchive[]? archives = null) : IArchive(name)
 {
     public readonly IArchive[]? Childrens = archives;
-    public readonly IFile? Entity = entity;
     public readonly string name = name;
     public override void Create(string path)
     {
