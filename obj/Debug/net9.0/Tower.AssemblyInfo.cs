@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Tower")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d5111eb7f90e5e38150d6b3d1d05d20cc95e480")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21a00861af5daa9f8ff0b40a57323d779469e10f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Tower")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Tower")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
