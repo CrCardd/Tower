@@ -54,11 +54,11 @@ public class ApplicationLayer : Layer
         newEntity.Create(Config.RootPath);
     }
 
-    public override void CreateReferences()
+    protected override void References()
     {
         ReferenceTo(LayersName.Domain);
     }
-    public override void InstallPackages()
+    protected override void Packages()
     {
         Install("AutoMapper.Extensions.Microsoft.DependencyInjection");
         Install("FluentValidation.DependencyInjectionExtensions");

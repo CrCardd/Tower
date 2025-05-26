@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "Final/1.0.0": {
+      "Tower/1.0.0": {
         "dependencies": {
           "Spectre.Console.Cli": "0.50.0"
         },
         "runtime": {
-          "Final.dll": {}
+          "Tower.dll": {}
         }
       },
       "Spectre.Console/0.50.0": {
@@ -72,7 +72,7 @@
     }
   },
   "libraries": {
-    "Final/1.0.0": {
+    "Tower/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

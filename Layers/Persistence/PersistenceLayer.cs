@@ -46,13 +46,13 @@ public class PersistenceLayer : Layer
         newEntity.Create(Config.RootPath);
     }
 
-    public override void CreateReferences()
+    protected override void References()
     {
         ReferenceTo(LayersName.Application);
         ReferenceTo(LayersName.Domain);
     }
 
-    public override void InstallPackages()
+    protected override void Packages()
     {
         Install("Microsoft.EntityFrameworkCore");
         Install("Microsoft.EntityFrameworkCore.Design");

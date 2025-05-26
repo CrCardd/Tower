@@ -51,16 +51,21 @@ public class CleanWA : Command<CleanWA.Settings>
         Config.Domain = new DomainLayer(settings.Name);
         Config.Persistence = new PersistenceLayer(settings.Name);
 
+        Console.WriteLine("----------------------------------------------");
 
         Config.Api.CreateLayer();
         Config.Application.CreateLayer();
         Config.Domain.CreateLayer();
         Config.Persistence.CreateLayer();
 
+        Console.WriteLine("----------------------------------------------");
+
         Config.Api.CreateReferences();
         Config.Application.CreateReferences();
         Config.Domain.CreateReferences();
         Config.Persistence.CreateReferences();
+
+        Console.WriteLine("----------------------------------------------");
 
         Config.Api.InstallPackages();
         Config.Application.InstallPackages();

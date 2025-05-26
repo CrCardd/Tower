@@ -179,9 +179,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\Final.csproj",
-      "projectName": "Final",
-      "projectPath": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\Final.csproj",
+      "projectUniqueName": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\Tower.csproj",
+      "projectName": "Tower",
+      "projectPath": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\Tower.csproj",
       "packagesPath": "C:\\Users\\crisr\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\crisr\\Desktop\\repositories\\Tower\\obj\\",
       "projectStyle": "PackageReference",

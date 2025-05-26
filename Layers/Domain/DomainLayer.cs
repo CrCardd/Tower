@@ -41,6 +41,6 @@ public class DomainLayer : Layer
         newEntity.Create(Config.RootPath);
     }
 
-    public override void CreateReferences(){}
-    public override void InstallPackages(){}
+    protected override void References(){}
+    protected override void Packages(){}
 }

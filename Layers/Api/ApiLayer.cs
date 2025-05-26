@@ -42,13 +42,13 @@ public class ApiLayer : Layer
         newEntity.Create(Config.RootPath);
     }
 
-    public override void CreateReferences()
+    protected override void References()
     {
         ReferenceTo(LayersName.Application);
         ReferenceTo(LayersName.Persistence);
     }
 
-    public override void InstallPackages()
+    protected override void Packages()
     {
         Install("Microsoft.AspNetCore.OpenApi");
         Install("Microsoft.EntityFrameworkCore");
