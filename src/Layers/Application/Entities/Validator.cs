@@ -13,7 +13,7 @@ public class Validator : IFile
 @$"
 using FluentValidation;
 
-namespace {Config.ProjectName}.Application.Features.{entity}.{featureName};
+namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
 
 public class {featureName}{entity}Validator : AbstractValidator<{featureName}{entity}Request>
 {{

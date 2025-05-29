@@ -14,11 +14,11 @@ public class Mapper : IFile
 using AutoMapper;
 using {Config.ProjectName}.Domain.Models;
 
-namespace {Config.ProjectName}.Application.Features.{entity}.{featureName};
+namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
 
 public class {featureName}{entity}Mapper : Profile
 {{
-    public Create{entity}apper()
+    public {featureName}{entity}Mapper()
     {{
         CreateMap<{featureName}{entity}Request, {entity}>();
         CreateMap<{entity}, {featureName}{entity}Response>();

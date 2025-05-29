@@ -11,7 +11,7 @@ public class Response : IFile
         string entity = featureNameEntity.Split(';')[1];
         this.Content =
 @$"
-namespace {Config.ProjectName}.Application.Features.{entity}.{featureName};
+namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
 
 public sealed record {featureName}{entity}Response(
 

@@ -27,7 +27,6 @@ public class NewFeature : Command<NewFeature.Settings>
             return 1;
 
         TextInfo ti = CultureInfo.CurrentCulture.TextInfo;
-        settings.Name = ti.ToTitleCase(settings.Name);
         settings.FeatureEntity = ti.ToTitleCase(settings.FeatureEntity);
 
         Config.Api = new ApiLayer(Config.ProjectName);

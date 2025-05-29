@@ -13,7 +13,7 @@ public class Request : IFile
 @$"
 using MediatR;
 
-namespace {Config.ProjectName}.Application.Features.{entity}.{featureName};
+namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
 
 public sealed record {featureName}{entity}Request(
 

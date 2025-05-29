@@ -72,7 +72,7 @@ public class ApplicationLayer : Layer
         new IFolder($"{this.ProjectName}.{LayersName.Application}",
         [
                 new IFolder("Features", [
-                    new IFolder(featureEntity,
+                    new IFolder($"{featureEntity}_",
                     [
                         new IFolder(name,
                         [
