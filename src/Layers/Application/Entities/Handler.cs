@@ -5,7 +5,7 @@ namespace Tower.Layers.Application.Entities;
 
 public class Handler : IFile
 {
-    public Handler(string featureNameEntity) : base($"{featureNameEntity.Split(';')[0]}Handler")
+    public Handler(string featureNameEntity) : base($"{featureNameEntity.Split(';')[0]}{featureNameEntity.Split(';')[1]}Handler")
     {
         string featureName = featureNameEntity.Split(';')[0];
         string entity = featureNameEntity.Split(';')[1];
