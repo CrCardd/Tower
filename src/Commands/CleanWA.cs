@@ -23,9 +23,6 @@ public class CleanWA : Command<CleanWA.Settings>
     }
     public override int Execute(CommandContext context, Settings settings)
     {
-        // if (!(settings.Path == Config.RootPath))
-        //     Config.RootPath = Directory.GetCurrentDirectory();
-
         if (settings.Name is null)
         {
             if (settings.Path == Config.RootPath)
@@ -67,12 +64,12 @@ public class CleanWA : Command<CleanWA.Settings>
         Config.Domain.CreateReferences();
         Config.Persistence.CreateReferences();
 
-        Console.WriteLine("----------------------------------------------");
+        // Console.WriteLine("----------------------------------------------");
 
-        Config.Api.InstallPackages();
-        Config.Application.InstallPackages();
-        Config.Domain.InstallPackages();
-        Config.Persistence.InstallPackages();
+        // Config.Api.InstallPackages();
+        // Config.Application.InstallPackages();
+        // Config.Domain.InstallPackages();
+        // Config.Persistence.InstallPackages();
 
         SaveJson(settings);
         return 0;

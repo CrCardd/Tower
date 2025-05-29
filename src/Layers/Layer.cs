@@ -12,6 +12,7 @@ public abstract class Layer(string ProjectName, string layerName, string Type = 
 
 
     public abstract void CreateEntity(string name);
+    public abstract void CreateFeature(string name, string featureEntity);
     protected abstract void References();
     protected abstract void Packages();
 

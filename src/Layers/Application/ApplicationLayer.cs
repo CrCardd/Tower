@@ -66,4 +66,25 @@ public class ApplicationLayer : Layer
         Install("Microsoft.AspNetCore.Authentication");
         Install("Microsoft.Extensions.Identity.Core");
     }
+    public override void CreateFeature(string name, string featureEntity)
+    {
+        IArchive newFeature =
+        new IFolder($"{this.ProjectName}.{LayersName.Application}",
+        [
+                new IFolder("Features", [
+                    new IFolder(featureEntity,
+                    [
+                        new IFolder(name,
+                        [
+                            new Handler($"{name};{featureEntity}"),
+                            new Mapper($"{name};{featureEntity}"),
+                            new Request($"{name};{featureEntity}"),
+                            new Response($"{name};{featureEntity}"),
+                            new Validator($"{name};{featureEntity}")
+                        ])
+                    ])
+                ]),
+        ]);
+        newFeature.Create(Config.RootPath);
+    }
 }
