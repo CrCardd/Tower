@@ -20,8 +20,8 @@ public class {featureName}{entity}Mapper : Profile
 {{
     public Create{entity}apper()
     {{
-        CreateMap<Create{entity}Request, {entity}>();
-        CreateMap<{entity}, Create{entity}Response>();
+        CreateMap<{featureName}{entity}Request, {entity}>();
+        CreateMap<{entity}, {featureName}{entity}Response>();
     }}
 }}
 ";

@@ -25,7 +25,7 @@ public class {featureName}{entity}(
     IUnitOfWork unitOfWork,
     I{entity}Repository {entity.ToLower()}Repository,
     IMapper mapper
-) : IRequestHandler<Create{entity}Request, Create{entity}Response>
+) : IRequestHandler<{featureName}{entity}Request, Create{entity}Response>
 {{
     private readonly IUnitOfWork unitOfWork = unitOfWork;
     private readonly I{entity}Repository {entity.ToLower()}Repository = {entity.ToLower()}Repository;
