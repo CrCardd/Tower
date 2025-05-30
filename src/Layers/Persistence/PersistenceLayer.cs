@@ -60,5 +60,5 @@ public class PersistenceLayer : Layer
         Install("Microsoft.Extensions.Configuration.Abstractions");
         Install("Pomelo.EntityFrameworkCore.MySql");
     }
-    public override void CreateFeature(string name, string featureEntity){}
+    public override void CreateFeature(string name, string featureEntity, string? featureFolderName){}
 }

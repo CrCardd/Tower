@@ -43,5 +43,5 @@ public class DomainLayer : Layer
 
     protected override void References(){}
     protected override void Packages(){}
-    public override void CreateFeature(string name, string featureEntity){}
+    public override void CreateFeature(string name, string featureEntity, string? featureFolderName){}
 }

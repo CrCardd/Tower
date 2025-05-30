@@ -57,5 +57,5 @@ public class ApiLayer : Layer
         Install("Microsoft.EntityFrameworkCore.Tools");
     }
 
-    public override void CreateFeature(string name, string featureEntity){}
+    public override void CreateFeature(string name, string featureEntity, string? featureFolderName){}
 }

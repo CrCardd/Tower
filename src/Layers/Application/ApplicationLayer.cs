@@ -66,13 +66,13 @@ public class ApplicationLayer : Layer
         Install("Microsoft.AspNetCore.Authentication");
         Install("Microsoft.Extensions.Identity.Core");
     }
-    public override void CreateFeature(string name, string featureEntity)
+    public override void CreateFeature(string name, string featureEntity, string? featureFolderName)
     {
         IArchive newFeature =
         new IFolder($"{this.ProjectName}.{LayersName.Application}",
         [
                 new IFolder("Features", [
-                    new IFolder($"{featureEntity}_",
+                    new IFolder( featureFolderName ?? $"{featureEntity}_",
                     [
                         new IFolder(name,
                         [

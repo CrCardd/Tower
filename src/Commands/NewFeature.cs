@@ -13,6 +13,9 @@ public class NewFeature : Command<NewFeature.Settings>
 {
     public class Settings : CommandSettings
     {
+        [CommandOption("-f|--featureFolderName")]
+        [Description("featureName")]
+        public string? FeatureFolderName { get; set; }
 
         [CommandArgument(0, "[entity]")]
         [Description("Feature's owner")]
@@ -34,10 +37,10 @@ public class NewFeature : Command<NewFeature.Settings>
         Config.Domain = new DomainLayer(Config.ProjectName);
         Config.Persistence = new PersistenceLayer(Config.ProjectName);
 
-        Config.Api.CreateFeature(settings.Name, settings.FeatureEntity);
-        Config.Application.CreateFeature(settings.Name, settings.FeatureEntity);
-        Config.Domain.CreateFeature(settings.Name, settings.FeatureEntity);
-        Config.Persistence.CreateFeature(settings.Name, settings.FeatureEntity);
+        Config.Api.CreateFeature(settings.Name, settings.FeatureEntity, settings.FeatureFolderName);
+        Config.Application.CreateFeature(settings.Name, settings.FeatureEntity, settings.FeatureFolderName);
+        Config.Domain.CreateFeature(settings.Name, settings.FeatureEntity, settings.FeatureFolderName);
+        Config.Persistence.CreateFeature(settings.Name, settings.FeatureEntity, settings.FeatureFolderName);
         return 0;
     }
 }
