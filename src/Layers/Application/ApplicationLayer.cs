@@ -76,11 +76,11 @@ public class ApplicationLayer : Layer
                     [
                         new IFolder(name,
                         [
-                            new Handler($"{name};{featureEntity}"),
-                            new Mapper($"{name};{featureEntity}"),
-                            new Request($"{name};{featureEntity}"),
-                            new Response($"{name};{featureEntity}"),
-                            new Validator($"{name};{featureEntity}")
+                            new Handler($"{name};{featureEntity};{featureFolderName}"),
+                            new Mapper($"{name};{featureEntity};{featureFolderName}"),
+                            new Request($"{name};{featureEntity};{featureFolderName}"),
+                            new Response($"{name};{featureEntity};{featureFolderName}"),
+                            new Validator($"{name};{featureEntity};{featureFolderName}")
                         ])
                     ])
                 ]),
