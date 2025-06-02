@@ -9,12 +9,13 @@ public class Mapper : IFile
     {
         string featureName = featureNameEntity.Split(';')[0];
         string entity = featureNameEntity.Split(';')[1];
+        string? folderName = featureNameEntity.Split(';').LastOrDefault();
         this.Content =
 @$"
 using AutoMapper;
 using {Config.ProjectName}.Domain.Models;
 
-namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
+namespace {Config.ProjectName}.Application.Features.{(entity == folderName ? $"{folderName}_" : folderName)}.{featureName};
 
 public class {featureName}{entity}Mapper : Profile
 {{

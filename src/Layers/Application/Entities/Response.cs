@@ -9,9 +9,10 @@ public class Response : IFile
     {
         string featureName = featureNameEntity.Split(';')[0];
         string entity = featureNameEntity.Split(';')[1];
+        string? folderName = featureNameEntity.Split(';').LastOrDefault();
         this.Content =
 @$"
-namespace {Config.ProjectName}.Application.Features.{entity}_.{featureName};
+namespace {Config.ProjectName}.Application.Features.{(entity == folderName ? $"{folderName}_" : folderName)}.{featureName};
 
 public sealed record {featureName}{entity}Response(
 
