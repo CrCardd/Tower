@@ -64,12 +64,12 @@ public class CleanWA : Command<CleanWA.Settings>
         Config.Domain.CreateReferences();
         Config.Persistence.CreateReferences();
 
-        // Console.WriteLine("----------------------------------------------");
+        Console.WriteLine("----------------------------------------------");
 
-        // Config.Api.InstallPackages();
-        // Config.Application.InstallPackages();
-        // Config.Domain.InstallPackages();
-        // Config.Persistence.InstallPackages();
+        Config.Api.InstallPackages();
+        Config.Application.InstallPackages();
+        Config.Domain.InstallPackages();
+        Config.Persistence.InstallPackages();
 
         SaveJson(settings);
         return 0;
