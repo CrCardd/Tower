@@ -94,4 +94,4 @@ exemplo:
 ---
 
 ## Licença
-MIT License — veja o arquivo **LICENSE**.
+MIT License — veja o arquivo [**LICENSE**](https://github.com/CrCardd/Tower/tree/newFeatureTemp?tab=License-1-ov-file).
