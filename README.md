@@ -92,3 +92,6 @@ exemplo:
 - Configurações personalizadas
 - Usuário dev com personalização de comandos e criação de novos arquivos
 ---
+
+## Licença
+MIT License — veja o arquivo **LICENSE**.
