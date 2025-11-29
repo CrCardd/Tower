@@ -65,3 +65,10 @@
 -f <feature_folder_name> (default: <entity_associated>_)
 
  
+---
+🚧 Implementação futura:
+- C++
+- Controle de camadas
+- Configurações personalizadas
+- Usuário dev com personalização de comandos e criação de novos arquivos
+---
