@@ -54,7 +54,7 @@ Versão: **v0.1.1**
 
 ### Começar novo projeto
 
-> **Tower** new cleanWA <name>  
+> **Tower** new cleanWA [name]  
 
 exemplo:  
 > **Tower** new cleanWA TowerAPI
@@ -63,7 +63,7 @@ exemplo:
 
 ---
 ### Criar nova entidade (IRepository, Model, Controller)
-> **Tower** new e | entity <name>  
+> **Tower** new e | entity [name]  
 
 exemplo:  
 > **Tower** new e User        
@@ -71,7 +71,7 @@ exemplo:
 
 ---
 ### Criar novas features/usecases
-> **Tower** new f | feature <entity_associated> <feature_name>  
+> **Tower** new f | feature [entity_associated] [feature_name]  
 
 exemplo:
 
@@ -79,7 +79,7 @@ exemplo:
 
 
 ### Opções: 
-> -f <feature_folder_name> (default: <entity_associated>_)  
+> -f [feature_folder_name] (default: [entity_associated]_)  
 
 exemplo:  
 > **Tower** new f User Auth -f UserFeatures
