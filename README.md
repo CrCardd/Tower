@@ -1,4 +1,9 @@
-# [Tower](https://github.com/CrCardd/Tower/tree/newFeatureTemp)
+# Tower
+
+Repositório: [GitHub - Tower](https://github.com/CrCardd/Tower/tree/newFeatureTemp)  
+Autor: [**@CrCardd**](https://github.com/CrCardd)  
+Tecnologia: **C#**  
+Versão: **v0.1.1**  
 
 ### Descrição
                 O objetivo do Tower é ganhar tempo quando trabalhamos com arquitetura 
@@ -49,24 +54,39 @@
 
 ### Começar novo projeto
 
-**Tower** `new cleanWA <name>`
+>> **Tower** new cleanWA <name>  
 
-#### * Se o você não especififcar o nome, o projeto será iniciado na pasta atual
+exemplo:  
+>> **Tower** new cleanWA TowerAPI
+
+#### * Se não for especififcado o nome, o projeto será iniciado na pasta atual
 
 ---
 ### Criar nova entidade (IRepository, Model, Controller)
-**Tower** `new e | entity <name>`
+>> **Tower** new e | entity <name>  
+
+exemplo:  
+>> **Tower** new e User        
+
 
 ---
 ### Criar novas features/usecases
-**Tower** `new f | feature <entity_associated> <feature_name>`
+>> **Tower** new f | feature <entity_associated> <feature_name>  
+
+exemplo:
+
+>> **Tower** new f User Auth
+
 
 ### Opções: 
--f <feature_folder_name> (default: <entity_associated>_)
+>> -f <feature_folder_name> (default: <entity_associated>_)  
+
+exemplo:  
+>> **Tower** new f User Auth -f UserFeatures
 
  
 ---
-🚧 Implementação futura:
+! Implementação futura: !
 - C++
 - Controle de camadas
 - Configurações personalizadas
